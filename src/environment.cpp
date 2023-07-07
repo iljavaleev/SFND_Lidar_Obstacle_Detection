@@ -41,13 +41,36 @@ void simpleHighway(pcl::visualization::PCLVisualizer::Ptr& viewer)
     // -----Open 3D viewer and display simple highway -----
     // ----------------------------------------------------
     
-    // RENDER OPTIONS
-    bool renderScene = true;
+    
+    bool renderScene = false; //with/without cars
     std::vector<Car> cars = initHighway(renderScene, viewer);
     
-    // TODO:: Create lidar sensor 
+    
+    Lidar *lidar_ptr = new Lidar(cars, 0.0);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud = lidar_ptr->scan();
 
-    // TODO:: Create point processor
+    renderPointCloud(viewer, cloud, "Some name");
+    
+    ProcessPointClouds<pcl::PointXYZ> *process_ptr{new ProcessPointClouds<pcl::PointXYZ>()};
+    
+    auto segmentCloud = process_ptr->SegmentPlane(cloud, 100, 0.2);
+//
+//    renderPointCloud(viewer,segmentCloud.first,"obstCloud",Color(1,0,0));
+//    renderPointCloud(viewer,segmentCloud.second,"planeCloud",Color(0,1,0));
+    
+    std::vector<pcl::PointCloud<pcl::PointXYZ>::Ptr> cloudClusters = process_ptr->Clustering(segmentCloud.first, 1.0, 3, 30);
+    int clusterId{};
+    std::vector<Color> colors{Color(1,0,0), Color(0,1,0), Color(0,0,1), Color(1,1,0 )};
+    
+    for (auto c:cloudClusters){
+        std::cout << "cluster size ";
+        process_ptr->numPoints(c);
+        renderPointCloud(viewer, c, "obstCloud" + std::to_string(clusterId), colors.at(clusterId));
+        clusterId++;
+    }
+    
+    delete process_ptr;
+    delete lidar_ptr;
   
 }
 
@@ -84,7 +107,8 @@ int main (int argc, char** argv)
     CameraAngle setAngle = XY;
     initCamera(setAngle, viewer);
     simpleHighway(viewer);
-
+    
+    
     while (!viewer->wasStopped ())
     {
         viewer->spinOnce ();

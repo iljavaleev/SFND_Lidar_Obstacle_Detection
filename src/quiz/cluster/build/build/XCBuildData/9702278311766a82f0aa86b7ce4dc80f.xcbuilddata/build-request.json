@@ -1,0 +1,62 @@
+{
+  "buildCommand" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "363a55808325a27d9ce96bb1345a807d463c36ab3e9912c5e1395f2f47decc1f"
+    },
+    {
+      "guid" : "363a55808325a27d9ce96bb1345a807df451c56f7d2a44018eacb932015d72b7"
+    },
+    {
+      "guid" : "363a55808325a27d9ce96bb1345a807d7b58fe27d1cabf6958e3d07e2302083c"
+    }
+  ],
+  "containerPath" : "/Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/playback.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx13.3",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/ilavaleev/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/ilavaleev/Library/Developer/Xcode/DerivedData/playback-hirftphbkwnzugfntjiviefigtch/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/ilavaleev/Library/Developer/Xcode/DerivedData/playback-hirftphbkwnzugfntjiviefigtch/Index.noindex/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

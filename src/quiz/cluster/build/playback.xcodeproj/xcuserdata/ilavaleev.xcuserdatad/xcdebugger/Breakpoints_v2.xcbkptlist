@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D2072CC9-C019-4929-8F27-CA0B414B0F42"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "001929C4-F3FB-49DB-89C4-869B6236992E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kdtree.h"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "insert(point, id)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6873DCED-B21E-43BD-B94E-7C73A5160DFD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kdtree.h"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "insert(point, id)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6873DCED-B21E-43BD-B94E-7C73A5160DFD - 929842dee2a54de4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KdTree::insert(std::__1::vector&lt;float, std::__1::allocator&lt;float&gt; &gt;, int)"
+                  moduleName = "quizCluster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/kdtree.h"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  uuid = "6873DCED-B21E-43BD-B94E-7C73A5160DFD - 929842dee2a54ff4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KdTree::insert(std::__1::vector&lt;float, std::__1::allocator&lt;float&gt; &gt;, int)"
+                  moduleName = "quizCluster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/kdtree.h"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "256">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2ABCDAC-B80B-429D-9A46-BA2D01B58F4B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kdtree.h"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "search(target, distanceTol)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6FE1805-51FD-4806-BB88-5FC2E8A22AC3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kdtree.h"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "search(target, distanceTol)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D6FE1805-51FD-4806-BB88-5FC2E8A22AC3 - 162a037972ed02d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KdTree::search(std::__1::vector&lt;float, std::__1::allocator&lt;float&gt; &gt;, float)"
+                  moduleName = "quizCluster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/kdtree.h"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "D6FE1805-51FD-4806-BB88-5FC2E8A22AC3 - 162a037972ed02b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KdTree::search(std::__1::vector&lt;float, std::__1::allocator&lt;float&gt; &gt;, float)"
+                  moduleName = "quizCluster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/kdtree.h"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15D7F182-1D93-4C29-B32E-ADEB18E093CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cluster.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "main()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "15D7F182-1D93-4C29-B32E-ADEB18E093CC - 5e31bc51d3061975"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "quizCluster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "1852">
+               </Location>
+               <Location
+                  uuid = "15D7F182-1D93-4C29-B32E-ADEB18E093CC - 5e31bc51d3061975"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "quizCluster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "1916">
+               </Location>
+               <Location
+                  uuid = "15D7F182-1D93-4C29-B32E-ADEB18E093CC - 5e31bc51d30626d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "quizCluster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "1852">
+               </Location>
+               <Location
+                  uuid = "15D7F182-1D93-4C29-B32E-ADEB18E093CC - 5e31bc51d30626d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "quizCluster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "1916">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D7E8748-BFBA-4BDB-80BA-0FFAB2039F80"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cluster.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "euclideanCluster(points, tree, distanceTol)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87CE3107-0F1F-4642-BD8E-5C531D787CAD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cluster.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "euclideanCluster(points, tree, distanceTol)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

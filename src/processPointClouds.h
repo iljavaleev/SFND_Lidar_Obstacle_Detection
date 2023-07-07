@@ -1,5 +1,6 @@
 // PCL lib Functions for processing point clouds 
 
+
 #ifndef PROCESSPOINTCLOUDS_H_
 #define PROCESSPOINTCLOUDS_H_
 
@@ -44,7 +45,7 @@ public:
 
     typename pcl::PointCloud<PointT>::Ptr loadPcd(std::string file);
 
-    std::vector<boost::filesystem::path> streamPcd(std::string dataPath);
+    std::vector<std::__fs::filesystem::path> streamPcd(std::string dataPath);
   
 };
 #endif /* PROCESSPOINTCLOUDS_H_ */

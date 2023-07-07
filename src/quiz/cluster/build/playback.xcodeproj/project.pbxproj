@@ -1,0 +1,764 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		010F121C32E947F1BF11E3AB /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DD34ED73685940E5830CFBE7 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				4158D3D87F3C6EE5FB271FF7 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		D1AB54EFF2504149827A312C /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F19D9A9103EC4621A45401B3 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				C377DCF44C619FE5FB579029 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				988DBC7369F04DBCAA20119D /* PBXTargetDependency */,
+				91CB2D2343FE4B79BC38D60B /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		178761E3439246F483835F9C /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 5202D60CD96E4265B5689EF5 /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/CMakeLists.txt */; };
+		3A96408ADDF94A3D93A0458C /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework */ = {isa = PBXBuildFile; fileRef = 684D0B9FC2624C17ADB1D7FF /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework */; };
+		52C0A7C405F84707AF21E361 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework */ = {isa = PBXBuildFile; fileRef = ADDC8EA21EF9495DB191B161 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework */; };
+		59F6D0ED5C14416F8CBC1165 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework */ = {isa = PBXBuildFile; fileRef = 32F17F21264F4E9184EE2BA3 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework */; };
+		6789682017184AAD922E47FD /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp */ = {isa = PBXBuildFile; fileRef = 30D860D772154A198C9AB6BB /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp */; };
+		A4C7E02D969740888EFD430A /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework */ = {isa = PBXBuildFile; fileRef = EFBE33825DB044A39DEA8D34 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework */; };
+		D66988D5F9724587A7E514DD /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/render/render.cpp */ = {isa = PBXBuildFile; fileRef = D87490B08D79406B8C05A605 /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/render/render.cpp */; };
+		F6BD281A45064D4E910BD1FC /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework */ = {isa = PBXBuildFile; fileRef = 6CA68DFF0A9E435E838169B3 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		10B0DC9239284B8488A284A8 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		71A37766DBF84BCFA4448687 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		CBCB58A5519941E182819C72 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		F7137F55FF56422EB19D5A32 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		6594AE40055C4C599D6D4E5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AFA603C89FE4E9392655EB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F06B2016E8F34D36A6C5661C;
+			remoteInfo = quizCluster;
+		};
+		66C523293DA642FCB877ABB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AFA603C89FE4E9392655EB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 010F121C32E947F1BF11E3AB;
+			remoteInfo = ZERO_CHECK;
+		};
+		8ADCEC48BF08470598A34E4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AFA603C89FE4E9392655EB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 010F121C32E947F1BF11E3AB;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30D860D772154A198C9AB6BB /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cluster.cpp; path = cluster.cpp; sourceTree = SOURCE_ROOT; };
+		32F17F21264F4E9184EE2BA3 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = "/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework"; sourceTree = "<absolute>"; };
+		5202D60CD96E4265B5689EF5 /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		684D0B9FC2624C17ADB1D7FF /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		6CA68DFF0A9E435E838169B3 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QtOpenGL.framework; path = "/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework"; sourceTree = "<absolute>"; };
+		A0C1A3E434EF4992B1D3BA5C /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		ADDC8EA21EF9495DB191B161 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = "/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework"; sourceTree = "<absolute>"; };
+		D87490B08D79406B8C05A605 /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/render/render.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = render.cpp; path = /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/render/render.cpp; sourceTree = "<absolute>"; };
+		EFBE33825DB044A39DEA8D34 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = "/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework"; sourceTree = "<absolute>"; };
+		FA38437CA45F43C193CF6381 /* quizCluster */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = quizCluster; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1052F0EF0874251BE49F133 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55A1299E4BFF4045A9A49A05 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		76E92B211BF34D1DBC876AEA = {
+			isa = PBXGroup;
+			children = (
+				C5D9F314A2184FC68A1DC1E4 /* quizCluster */,
+				BD238CCF780041C6AEBE36C9 /* ALL_BUILD */,
+				E901F81A4ECB4FBAAB8D1F52 /* Products */,
+				F233DD21BF504345A4DA21A3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BD238CCF780041C6AEBE36C9 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				55A1299E4BFF4045A9A49A05 /* CMake Rules */,
+				A0C1A3E434EF4992B1D3BA5C /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		C5D9F314A2184FC68A1DC1E4 /* quizCluster */ = {
+			isa = PBXGroup;
+			children = (
+				F7D1E80DB51049B6BB70C193 /* Source Files */,
+				5202D60CD96E4265B5689EF5 /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/CMakeLists.txt */,
+			);
+			name = quizCluster;
+			sourceTree = "<group>";
+		};
+		E901F81A4ECB4FBAAB8D1F52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA38437CA45F43C193CF6381 /* quizCluster */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F233DD21BF504345A4DA21A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CA68DFF0A9E435E838169B3 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework */,
+				32F17F21264F4E9184EE2BA3 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework */,
+				EFBE33825DB044A39DEA8D34 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework */,
+				ADDC8EA21EF9495DB191B161 /* /opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework */,
+				684D0B9FC2624C17ADB1D7FF /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7D1E80DB51049B6BB70C193 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				30D860D772154A198C9AB6BB /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp */,
+				D87490B08D79406B8C05A605 /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/render/render.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F06B2016E8F34D36A6C5661C /* quizCluster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FFEF34BCBC14514B5F4DEAB /* Build configuration list for PBXNativeTarget "quizCluster" */;
+			buildPhases = (
+				64EDA28C18C348A5AAECE45C /* Sources */,
+				E1052F0EF0874251BE49F133 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41850AA4512344BF9A7BE887 /* PBXTargetDependency */,
+			);
+			name = quizCluster;
+			productName = quizCluster;
+			productReference = FA38437CA45F43C193CF6381 /* quizCluster */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AFA603C89FE4E9392655EB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = C513C7F84CA049C6AB59FE9B /* Build configuration list for PBXProject "playback" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				10B0DC9239284B8488A284A8 /* Debug */,
+				F7137F55FF56422EB19D5A32 /* Release */,
+				CBCB58A5519941E182819C72 /* MinSizeRel */,
+				71A37766DBF84BCFA4448687 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 76E92B211BF34D1DBC876AEA;
+			projectDirPath = /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster;
+			projectRoot = "";
+			targets = (
+				D1AB54EFF2504149827A312C /* ALL_BUILD */,
+				010F121C32E947F1BF11E3AB /* ZERO_CHECK */,
+				F06B2016E8F34D36A6C5661C /* quizCluster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		4158D3D87F3C6EE5FB271FF7 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+/Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/ZERO_CHECK			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
+  make -f /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
+  make -f /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
+  make -f /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
+  make -f /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		C377DCF44C619FE5FB579029 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+/Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/ALL_BUILD			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64EDA28C18C348A5AAECE45C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6789682017184AAD922E47FD /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp */,
+				D66988D5F9724587A7E514DD /* /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/render/render.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41850AA4512344BF9A7BE887 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 010F121C32E947F1BF11E3AB /* ZERO_CHECK */;
+			targetProxy = 8ADCEC48BF08470598A34E4A /* PBXContainerItemProxy */;
+		};
+		91CB2D2343FE4B79BC38D60B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 010F121C32E947F1BF11E3AB /* ZERO_CHECK */;
+			targetProxy = 66C523293DA642FCB877ABB0 /* PBXContainerItemProxy */;
+		};
+		988DBC7369F04DBCAA20119D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F06B2016E8F34D36A6C5661C /* quizCluster */;
+			targetProxy = 6594AE40055C4C599D6D4E5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0EA2DFBE57E0412EB27F5BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		11D2DFFA9A7D475C8CC1FDC9 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/build;
+			};
+			name = MinSizeRel;
+		};
+		15962F6487A84C489B564022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		3333BEFD9D784469A48A52DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		3ED4EED0F1C94F58919C334F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		68EDFDAA2F3B416DB8F7CBBC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		7CD4FAA661A94F8CB8483927 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = ("/opt/homebrew/Cellar/qt@5/5.15.10/lib","$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",BOOST_SYSTEM_NO_LIB,BOOST_SYSTEM_DYN_LINK,BOOST_FILESYSTEM_NO_LIB,BOOST_FILESYSTEM_DYN_LINK,BOOST_ATOMIC_NO_LIB,BOOST_ATOMIC_DYN_LINK,BOOST_IOSTREAMS_NO_LIB,BOOST_IOSTREAMS_DYN_LINK,BOOST_SERIALIZATION_NO_LIB,BOOST_SERIALIZATION_DYN_LINK,"'kiss_fft_scalar=double'",QT_OPENGL_LIB,QT_WIDGETS_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/opt/homebrew/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++14' -ffloat-store -fPIC   -std=c++14";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/opt/homebrew/lib/libpcl_apps.dylib,/opt/homebrew/lib/libpcl_outofcore.dylib,/opt/homebrew/lib/libpcl_people.dylib,/opt/homebrew/lib/libpcl_simulation.dylib,/opt/homebrew/lib/libpcl_keypoints.dylib,/opt/homebrew/lib/libpcl_tracking.dylib,/opt/homebrew/lib/libpcl_recognition.dylib,/opt/homebrew/lib/libpcl_registration.dylib,/opt/homebrew/lib/libpcl_stereo.dylib,/opt/homebrew/lib/libpcl_segmentation.dylib,/opt/homebrew/lib/libpcl_ml.dylib,/opt/homebrew/lib/libpcl_features.dylib,/opt/homebrew/lib/libpcl_filters.dylib,/opt/homebrew/lib/libpcl_sample_consensus.dylib,/opt/homebrew/lib/libpcl_visualization.dylib,/opt/homebrew/lib/libpcl_io.dylib,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libpcap.tbd,/opt/homebrew/lib/libpng.dylib,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libz.tbd,/opt/homebrew/lib/libpcl_surface.dylib,/opt/homebrew/lib/libpcl_search.dylib,/opt/homebrew/lib/libpcl_kdtree.dylib,/opt/homebrew/lib/libpcl_octree.dylib,"/opt/homebrew/lib/libvtkChartsCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkInteractionImage-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOGeometry-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOPLY-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingLOD-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkViewsContext2D-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkViewsCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingContextOpenGL2-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkGUISupportQt-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkInteractionWidgets-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersModeling-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkInteractionStyle-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersExtraction-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOLegacy-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingAnnotation-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingContext2D-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingFreeType-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkfreetype-9.2.9.2.6.dylib",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libz.tbd,"/opt/homebrew/lib/libvtkIOImage-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingOpenGL2-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingHyperTreeGrid-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkImagingSources-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkImagingCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingUI-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonColor-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersGeometry-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersSources-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersGeneral-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonComputationalGeometry-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonExecutionModel-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonDataModel-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonMisc-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonTransforms-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonMath-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkkissfft-9.2.9.2.6.dylib",/opt/homebrew/lib/libGLEW.dylib,"-framework Cocoa","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework/QtOpenGL","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework/QtWidgets","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework/QtGui","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework/QtCore","/opt/homebrew/lib/libvtkCommonCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtksys-9.2.9.2.6.dylib",/opt/homebrew/lib/libpcl_common.dylib,"/opt/homebrew/lib/libboost_system-mt.dylib","/opt/homebrew/lib/libboost_filesystem-mt.dylib","/opt/homebrew/lib/libboost_atomic-mt.dylib","/opt/homebrew/lib/libboost_iostreams-mt.dylib","/opt/homebrew/lib/libboost_serialization-mt.dylib","-Xlinker -framework -Xlinker OpenGL",/opt/homebrew/lib/libGLEW.dylib,/opt/homebrew/lib/libflann_cpp.1.9.2.dylib,/opt/homebrew/Cellar/lz4/1.9.4/lib/liblz4.dylib,/opt/homebrew/lib/libqhull_r.8.0.2.dylib,"-lm","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = quizCluster;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = ("/opt/homebrew/Cellar/qt@5/5.15.10/lib","$(inherited)");
+				SYSTEM_HEADER_SEARCH_PATHS = ("/opt/homebrew/include/pcl-1.13",/opt/homebrew/include/eigen3,/opt/homebrew/include,"/opt/homebrew/include/vtk-9.2","/opt/homebrew/include/vtk-9.2/vtknlohmannjson/include","/opt/homebrew/include/vtk-9.2/vtkfreetype/include","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework/Headers","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework/Headers","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework/Headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers,"/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework/Headers","/opt/homebrew/Cellar/qt@5/5.15.10/./mkspecs/macx-clang","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/build/quizCluster.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		8A8E68155A764E8CA3D2B5EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = ("/opt/homebrew/Cellar/qt@5/5.15.10/lib","$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",BOOST_SYSTEM_NO_LIB,BOOST_SYSTEM_DYN_LINK,BOOST_FILESYSTEM_NO_LIB,BOOST_FILESYSTEM_DYN_LINK,BOOST_ATOMIC_NO_LIB,BOOST_ATOMIC_DYN_LINK,BOOST_IOSTREAMS_NO_LIB,BOOST_IOSTREAMS_DYN_LINK,BOOST_SERIALIZATION_NO_LIB,BOOST_SERIALIZATION_DYN_LINK,"'kiss_fft_scalar=double'",QT_OPENGL_LIB,QT_WIDGETS_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/opt/homebrew/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++14' -ffloat-store -fPIC   -std=c++14";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/opt/homebrew/lib/libpcl_apps.dylib,/opt/homebrew/lib/libpcl_outofcore.dylib,/opt/homebrew/lib/libpcl_people.dylib,/opt/homebrew/lib/libpcl_simulation.dylib,/opt/homebrew/lib/libpcl_keypoints.dylib,/opt/homebrew/lib/libpcl_tracking.dylib,/opt/homebrew/lib/libpcl_recognition.dylib,/opt/homebrew/lib/libpcl_registration.dylib,/opt/homebrew/lib/libpcl_stereo.dylib,/opt/homebrew/lib/libpcl_segmentation.dylib,/opt/homebrew/lib/libpcl_ml.dylib,/opt/homebrew/lib/libpcl_features.dylib,/opt/homebrew/lib/libpcl_filters.dylib,/opt/homebrew/lib/libpcl_sample_consensus.dylib,/opt/homebrew/lib/libpcl_visualization.dylib,/opt/homebrew/lib/libpcl_io.dylib,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libpcap.tbd,/opt/homebrew/lib/libpng.dylib,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libz.tbd,/opt/homebrew/lib/libpcl_surface.dylib,/opt/homebrew/lib/libpcl_search.dylib,/opt/homebrew/lib/libpcl_kdtree.dylib,/opt/homebrew/lib/libpcl_octree.dylib,"/opt/homebrew/lib/libvtkChartsCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkInteractionImage-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOGeometry-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOPLY-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingLOD-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkViewsContext2D-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkViewsCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingContextOpenGL2-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkGUISupportQt-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkInteractionWidgets-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersModeling-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkInteractionStyle-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersExtraction-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOLegacy-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingAnnotation-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingContext2D-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingFreeType-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkfreetype-9.2.9.2.6.dylib",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libz.tbd,"/opt/homebrew/lib/libvtkIOImage-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingOpenGL2-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingHyperTreeGrid-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkImagingSources-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkImagingCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingUI-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonColor-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersGeometry-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersSources-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersGeneral-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonComputationalGeometry-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonExecutionModel-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonDataModel-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonMisc-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonTransforms-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonMath-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkkissfft-9.2.9.2.6.dylib",/opt/homebrew/lib/libGLEW.dylib,"-framework Cocoa","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework/QtOpenGL","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework/QtWidgets","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework/QtGui","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework/QtCore","/opt/homebrew/lib/libvtkCommonCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtksys-9.2.9.2.6.dylib",/opt/homebrew/lib/libpcl_common.dylib,"/opt/homebrew/lib/libboost_system-mt.dylib","/opt/homebrew/lib/libboost_filesystem-mt.dylib","/opt/homebrew/lib/libboost_atomic-mt.dylib","/opt/homebrew/lib/libboost_iostreams-mt.dylib","/opt/homebrew/lib/libboost_serialization-mt.dylib","-Xlinker -framework -Xlinker OpenGL",/opt/homebrew/lib/libGLEW.dylib,/opt/homebrew/lib/libflann_cpp.1.9.2.dylib,/opt/homebrew/Cellar/lz4/1.9.4/lib/liblz4.dylib,/opt/homebrew/lib/libqhull_r.8.0.2.dylib,"-lm","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = quizCluster;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = ("/opt/homebrew/Cellar/qt@5/5.15.10/lib","$(inherited)");
+				SYSTEM_HEADER_SEARCH_PATHS = ("/opt/homebrew/include/pcl-1.13",/opt/homebrew/include/eigen3,/opt/homebrew/include,"/opt/homebrew/include/vtk-9.2","/opt/homebrew/include/vtk-9.2/vtknlohmannjson/include","/opt/homebrew/include/vtk-9.2/vtkfreetype/include","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework/Headers","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework/Headers","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework/Headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers,"/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework/Headers","/opt/homebrew/Cellar/qt@5/5.15.10/./mkspecs/macx-clang","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/build/quizCluster.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		8C3B608DB47D480A9EB66C69 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		952B32B3548A41F2A77778AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/build;
+			};
+			name = Release;
+		};
+		9865D199DE8547BAA491EF9A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		AA2E9713B75844E6A02A46F6 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CD286C07A353456CABAD83B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = ("/opt/homebrew/Cellar/qt@5/5.15.10/lib","$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",BOOST_SYSTEM_NO_LIB,BOOST_SYSTEM_DYN_LINK,BOOST_FILESYSTEM_NO_LIB,BOOST_FILESYSTEM_DYN_LINK,BOOST_ATOMIC_NO_LIB,BOOST_ATOMIC_DYN_LINK,BOOST_IOSTREAMS_NO_LIB,BOOST_IOSTREAMS_DYN_LINK,BOOST_SERIALIZATION_NO_LIB,BOOST_SERIALIZATION_DYN_LINK,"'kiss_fft_scalar=double'",QT_OPENGL_LIB,QT_WIDGETS_LIB,QT_GUI_LIB,QT_CORE_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/opt/homebrew/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++14' -ffloat-store -fPIC   -std=c++14";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/opt/homebrew/lib/libpcl_apps.dylib,/opt/homebrew/lib/libpcl_outofcore.dylib,/opt/homebrew/lib/libpcl_people.dylib,/opt/homebrew/lib/libpcl_simulation.dylib,/opt/homebrew/lib/libpcl_keypoints.dylib,/opt/homebrew/lib/libpcl_tracking.dylib,/opt/homebrew/lib/libpcl_recognition.dylib,/opt/homebrew/lib/libpcl_registration.dylib,/opt/homebrew/lib/libpcl_stereo.dylib,/opt/homebrew/lib/libpcl_segmentation.dylib,/opt/homebrew/lib/libpcl_ml.dylib,/opt/homebrew/lib/libpcl_features.dylib,/opt/homebrew/lib/libpcl_filters.dylib,/opt/homebrew/lib/libpcl_sample_consensus.dylib,/opt/homebrew/lib/libpcl_visualization.dylib,/opt/homebrew/lib/libpcl_io.dylib,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libpcap.tbd,/opt/homebrew/lib/libpng.dylib,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libz.tbd,/opt/homebrew/lib/libpcl_surface.dylib,/opt/homebrew/lib/libpcl_search.dylib,/opt/homebrew/lib/libpcl_kdtree.dylib,/opt/homebrew/lib/libpcl_octree.dylib,"/opt/homebrew/lib/libvtkChartsCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkInteractionImage-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOGeometry-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOPLY-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingLOD-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkViewsContext2D-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkViewsCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingContextOpenGL2-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkGUISupportQt-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkInteractionWidgets-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersModeling-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkInteractionStyle-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersExtraction-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOLegacy-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingAnnotation-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingContext2D-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingFreeType-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkfreetype-9.2.9.2.6.dylib",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libz.tbd,"/opt/homebrew/lib/libvtkIOImage-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingOpenGL2-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingHyperTreeGrid-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkImagingSources-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkImagingCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingUI-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonColor-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersGeometry-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersSources-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersGeneral-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonComputationalGeometry-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonExecutionModel-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonDataModel-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonMisc-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonTransforms-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonMath-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkkissfft-9.2.9.2.6.dylib",/opt/homebrew/lib/libGLEW.dylib,"-framework Cocoa","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework/QtOpenGL","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework/QtWidgets","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework/QtGui","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework/QtCore","/opt/homebrew/lib/libvtkCommonCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtksys-9.2.9.2.6.dylib",/opt/homebrew/lib/libpcl_common.dylib,"/opt/homebrew/lib/libboost_system-mt.dylib","/opt/homebrew/lib/libboost_filesystem-mt.dylib","/opt/homebrew/lib/libboost_atomic-mt.dylib","/opt/homebrew/lib/libboost_iostreams-mt.dylib","/opt/homebrew/lib/libboost_serialization-mt.dylib","-Xlinker -framework -Xlinker OpenGL",/opt/homebrew/lib/libGLEW.dylib,/opt/homebrew/lib/libflann_cpp.1.9.2.dylib,/opt/homebrew/Cellar/lz4/1.9.4/lib/liblz4.dylib,/opt/homebrew/lib/libqhull_r.8.0.2.dylib,"-lm","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = quizCluster;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = ("/opt/homebrew/Cellar/qt@5/5.15.10/lib","$(inherited)");
+				SYSTEM_HEADER_SEARCH_PATHS = ("/opt/homebrew/include/pcl-1.13",/opt/homebrew/include/eigen3,/opt/homebrew/include,"/opt/homebrew/include/vtk-9.2","/opt/homebrew/include/vtk-9.2/vtknlohmannjson/include","/opt/homebrew/include/vtk-9.2/vtkfreetype/include","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework/Headers","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework/Headers","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework/Headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers,"/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework/Headers","/opt/homebrew/Cellar/qt@5/5.15.10/./mkspecs/macx-clang","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/build/quizCluster.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		D75F1302A6904D6AB73E703A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EC0958B324B34C8D9DF29003 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = ("/opt/homebrew/Cellar/qt@5/5.15.10/lib","$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",BOOST_SYSTEM_NO_LIB,BOOST_SYSTEM_DYN_LINK,BOOST_FILESYSTEM_NO_LIB,BOOST_FILESYSTEM_DYN_LINK,BOOST_ATOMIC_NO_LIB,BOOST_ATOMIC_DYN_LINK,BOOST_IOSTREAMS_NO_LIB,BOOST_IOSTREAMS_DYN_LINK,BOOST_SERIALIZATION_NO_LIB,BOOST_SERIALIZATION_DYN_LINK,"'kiss_fft_scalar=double'",QT_OPENGL_LIB,QT_WIDGETS_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
+				LIBRARY_SEARCH_PATHS = ("/opt/homebrew/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",/opt/homebrew/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++14' -ffloat-store -fPIC   -std=c++14";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/opt/homebrew/lib/libpcl_apps.dylib,/opt/homebrew/lib/libpcl_outofcore.dylib,/opt/homebrew/lib/libpcl_people.dylib,/opt/homebrew/lib/libpcl_simulation.dylib,/opt/homebrew/lib/libpcl_keypoints.dylib,/opt/homebrew/lib/libpcl_tracking.dylib,/opt/homebrew/lib/libpcl_recognition.dylib,/opt/homebrew/lib/libpcl_registration.dylib,/opt/homebrew/lib/libpcl_stereo.dylib,/opt/homebrew/lib/libpcl_segmentation.dylib,/opt/homebrew/lib/libpcl_ml.dylib,/opt/homebrew/lib/libpcl_features.dylib,/opt/homebrew/lib/libpcl_filters.dylib,/opt/homebrew/lib/libpcl_sample_consensus.dylib,/opt/homebrew/lib/libpcl_visualization.dylib,/opt/homebrew/lib/libpcl_io.dylib,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libpcap.tbd,/opt/homebrew/lib/libpng.dylib,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libz.tbd,/opt/homebrew/lib/libpcl_surface.dylib,/opt/homebrew/lib/libpcl_search.dylib,/opt/homebrew/lib/libpcl_kdtree.dylib,/opt/homebrew/lib/libpcl_octree.dylib,"/opt/homebrew/lib/libvtkChartsCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkInteractionImage-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOGeometry-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOPLY-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingLOD-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkViewsContext2D-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkViewsCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingContextOpenGL2-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkGUISupportQt-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkInteractionWidgets-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersModeling-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkInteractionStyle-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersExtraction-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOLegacy-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkIOCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingAnnotation-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingContext2D-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingFreeType-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkfreetype-9.2.9.2.6.dylib",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libz.tbd,"/opt/homebrew/lib/libvtkIOImage-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingOpenGL2-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingHyperTreeGrid-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkImagingSources-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkImagingCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingUI-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkRenderingCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonColor-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersGeometry-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersSources-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersGeneral-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonComputationalGeometry-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkFiltersCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonExecutionModel-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonDataModel-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonMisc-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonTransforms-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkCommonMath-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtkkissfft-9.2.9.2.6.dylib",/opt/homebrew/lib/libGLEW.dylib,"-framework Cocoa","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework/QtOpenGL","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework/QtWidgets","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework/QtGui","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework/QtCore","/opt/homebrew/lib/libvtkCommonCore-9.2.9.2.6.dylib","/opt/homebrew/lib/libvtksys-9.2.9.2.6.dylib",/opt/homebrew/lib/libpcl_common.dylib,"/opt/homebrew/lib/libboost_system-mt.dylib","/opt/homebrew/lib/libboost_filesystem-mt.dylib","/opt/homebrew/lib/libboost_atomic-mt.dylib","/opt/homebrew/lib/libboost_iostreams-mt.dylib","/opt/homebrew/lib/libboost_serialization-mt.dylib","-Xlinker -framework -Xlinker OpenGL",/opt/homebrew/lib/libGLEW.dylib,/opt/homebrew/lib/libflann_cpp.1.9.2.dylib,/opt/homebrew/Cellar/lz4/1.9.4/lib/liblz4.dylib,/opt/homebrew/lib/libqhull_r.8.0.2.dylib,"-lm","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = quizCluster;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = ("/opt/homebrew/Cellar/qt@5/5.15.10/lib","$(inherited)");
+				SYSTEM_HEADER_SEARCH_PATHS = ("/opt/homebrew/include/pcl-1.13",/opt/homebrew/include/eigen3,/opt/homebrew/include,"/opt/homebrew/include/vtk-9.2","/opt/homebrew/include/vtk-9.2/vtknlohmannjson/include","/opt/homebrew/include/vtk-9.2/vtkfreetype/include","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtOpenGL.framework/Headers","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtWidgets.framework/Headers","/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtGui.framework/Headers",/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/OpenGL.framework/Headers,"/opt/homebrew/Cellar/qt@5/5.15.10/lib/QtCore.framework/Headers","/opt/homebrew/Cellar/qt@5/5.15.10/./mkspecs/macx-clang","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/build/quizCluster.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F7588F63743F4E33AFE7A377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SYMROOT = /Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/build;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FFEF34BCBC14514B5F4DEAB /* Build configuration list for PBXNativeTarget "quizCluster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD286C07A353456CABAD83B1 /* Debug */,
+				8A8E68155A764E8CA3D2B5EE /* Release */,
+				EC0958B324B34C8D9DF29003 /* MinSizeRel */,
+				7CD4FAA661A94F8CB8483927 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C513C7F84CA049C6AB59FE9B /* Build configuration list for PBXProject "playback" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7588F63743F4E33AFE7A377 /* Debug */,
+				952B32B3548A41F2A77778AA /* Release */,
+				11D2DFFA9A7D475C8CC1FDC9 /* MinSizeRel */,
+				8C3B608DB47D480A9EB66C69 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DD34ED73685940E5830CFBE7 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15962F6487A84C489B564022 /* Debug */,
+				3ED4EED0F1C94F58919C334F /* Release */,
+				9865D199DE8547BAA491EF9A /* MinSizeRel */,
+				D75F1302A6904D6AB73E703A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F19D9A9103EC4621A45401B3 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3333BEFD9D784469A48A52DF /* Debug */,
+				0EA2DFBE57E0412EB27F5BD2 /* Release */,
+				68EDFDAA2F3B416DB8F7CBBC /* MinSizeRel */,
+				AA2E9713B75844E6A02A46F6 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AFA603C89FE4E9392655EB7 /* Project object */;
+}
