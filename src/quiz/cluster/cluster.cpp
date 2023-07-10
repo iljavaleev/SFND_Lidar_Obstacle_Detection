@@ -7,6 +7,8 @@
 #include <string>
 #include <set>
 #include "kdtree.h"
+#include<functional>
+#include <algorithm>
 
 // Arguments:
 // window is the region to draw box around
@@ -100,7 +102,7 @@ std::vector<std::vector<int>> euclideanCluster(std::vector<std::vector<float>> p
                 auto p = std::move(stack.back());
                 stack.pop_back();
                 if (!p.at(2)){
-                    
+                    p.at(2) = 1;
                     points.at(p.at(3)).at(2) = 1;
                     cluster.push_back(p.at(3));
                     
@@ -117,6 +119,38 @@ std::vector<std::vector<int>> euclideanCluster(std::vector<std::vector<float>> p
 }
 
 
+
+int median_x(std::vector<std::vector<float>> &v)
+{
+    size_t n = v.size() / 2;
+    nth_element(v.begin(), v.begin()+n, v.end(), [](std::vector<float> a, std::vector<float> b){
+        return a.at(0) < b.at(0);
+    });
+    return (int) v.size() / 2;
+}
+
+int median_y(std::vector<std::vector<float>> &v)
+{
+    size_t n = v.size() / 2;
+    nth_element(v.begin(), v.begin()+n, v.end(), [](std::vector<float> a, std::vector<float> b){
+        return a.at(1) < b.at(1);
+    });
+    return (int) v.size() / 2;
+}
+
+void insert_into_tree(KdTree *t, std::vector<std::vector<float>> points){
+    int i{}, idx{};
+    while(!points.empty()){
+        if (i % 2){
+            idx = median_y(points);
+        }else
+            idx = median_x(points);
+        std::cout << points.at(idx).at(0) << std::endl;
+        t->insert(points.at(idx), i);
+        points.erase(points.begin() + idx);
+        i++;
+    }
+}
 
 int main ()
 {
@@ -140,12 +174,17 @@ int main ()
 
     for (int i=0; i<points.size(); i++)
     	tree->insert(points[i],i);
-
+//    insert_into_tree(tree, points);
+    
+    
+    
+    
+    
     int it = 0;
     render2DTree(tree->root, viewer, window, it);
 //
   	std::cout << "Test Search" << std::endl;
-  	std::vector<int> nearby = tree->search({-6,7},3.0);
+  	std::vector<int> nearby = tree->search({-6,7},1.0);
   	for(int index : nearby)
       std::cout << index << ",";
   	std::cout << std::endl;
@@ -177,5 +216,7 @@ int main ()
   	{
   	  viewer->spinOnce ();
   	}
-  	
+
 }
+
+

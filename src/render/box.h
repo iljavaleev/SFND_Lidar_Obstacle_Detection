@@ -2,6 +2,7 @@
 #define BOX_H
 #include <Eigen/Geometry> 
 
+
 struct BoxQ
 {
 	Eigen::Vector3f bboxTransform;

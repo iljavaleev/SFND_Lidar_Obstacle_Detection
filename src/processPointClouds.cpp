@@ -1,7 +1,8 @@
 // PCL lib Functions for processing point clouds 
 
 #include "processPointClouds.h"
-
+#include <Eigen/Geometry>
+#include <Eigen/Dense>
 
 //constructor:
 template<typename PointT>
@@ -131,7 +132,7 @@ std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::C
         for (const auto& idx : cluster.indices) {
             cloud_cluster->push_back(cloud->points.at(idx));
         }
-        cloud_cluster->width = cloud_cluster->size ();
+        cloud_cluster->width = cloud_cluster->size();
         cloud_cluster->height = 1;
         cloud_cluster->is_dense = true;
         
@@ -163,6 +164,44 @@ Box ProcessPointClouds<PointT>::BoundingBox(typename pcl::PointCloud<PointT>::Pt
     box.z_max = maxPoint.z;
 
     return box;
+}
+
+template<typename PointT>
+BoxQ ProcessPointClouds<PointT>::BoundingBoxQ(typename pcl::PointCloud<PointT>::Ptr cluster){
+    // compute the centroid (c0, c1, c2) and the normalized covariance
+    //compute PCA
+    Eigen::Vector4f pcaCentroid;
+    pcl::compute3DCentroid(*cluster, pcaCentroid);
+    
+    Eigen::Matrix3f covMatrix;
+    pcl::computeCovarianceMatrixNormalized (*cluster, pcaCentroid, covMatrix);
+    //compute the eigenvectors e0, e1, e2.  (e0, e1, e0 X e1)
+    
+    Eigen::SelfAdjointEigenSolver<Eigen::Matrix3f> eigen_solver(covMatrix, Eigen::ComputeEigenvectors);
+    Eigen::Matrix3f eigPca = eigen_solver.eigenvectors();
+    eigPca.col(2) = eigPca.col(0).cross(eigPca.col(1));
+    
+    //move the points in that RF
+    // Transform the original cloud to the origin where the principal components correspond to the axes.
+    Eigen::Matrix4f projectionTransform(Eigen::Matrix4f::Identity());
+    projectionTransform.block<3,3>(0,0) = eigPca.transpose();
+    projectionTransform.block<3,1>(0,3) = -1.f * (projectionTransform.block<3,3>(0,0) * pcaCentroid.head<3>());
+    
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudPointsProjected {new pcl::PointCloud<pcl::PointXYZ>};
+    pcl::transformPointCloud(*cluster, *cloudPointsProjected, projectionTransform);
+    
+    //compute the max, the min and the center of the diagonal
+    // Get the minimum and maximum points of the transformed cloud.
+    pcl::PointXYZ min, max;
+    pcl::getMinMax3D(*cloudPointsProjected, min, max);
+    const Eigen::Vector3f meanDiagonal = 0.5f * (max.getVector3fMap() + min.getVector3fMap());
+    
+    const Eigen::Quaternionf bboxQuaternion(eigPca);
+    const Eigen::Vector3f bboxTransform{eigPca * meanDiagonal + pcaCentroid.head<3>()};
+    
+    
+    return BoxQ{bboxTransform, bboxQuaternion, max.x - min.x, max.y - min.y, max.z - min.z};
+    
 }
 
 

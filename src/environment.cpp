@@ -35,14 +35,14 @@ std::vector<Car> initHighway(bool renderScene, pcl::visualization::PCLVisualizer
 }
 
 
-void simpleHighway(pcl::visualization::PCLVisualizer::Ptr& viewer)
+void simpleHighway(pcl::visualization::PCLVisualizer::Ptr& viewer, bool renderScene = false, bool render_clusters = false, bool render_box = false, bool render_min_max = false)
 {
     // ----------------------------------------------------
     // -----Open 3D viewer and display simple highway -----
     // ----------------------------------------------------
     
     
-    bool renderScene = false; //with/without cars
+     //with/without cars
     std::vector<Car> cars = initHighway(renderScene, viewer);
     
     
@@ -63,9 +63,19 @@ void simpleHighway(pcl::visualization::PCLVisualizer::Ptr& viewer)
     std::vector<Color> colors{Color(1,0,0), Color(0,1,0), Color(0,0,1), Color(1,1,0 )};
     
     for (auto c:cloudClusters){
-        std::cout << "cluster size ";
-        process_ptr->numPoints(c);
-        renderPointCloud(viewer, c, "obstCloud" + std::to_string(clusterId), colors.at(clusterId));
+        if (render_clusters){
+            std::cout << "cluster size ";
+            process_ptr->numPoints(c);
+            renderPointCloud(viewer, c, "obstCloud" + std::to_string(clusterId), colors.at(clusterId));
+        }
+        if (render_box){
+            Box box = process_ptr->BoundingBox(c);
+            renderBox(viewer, box, clusterId);
+        }
+        if (render_min_max){
+            BoxQ box = process_ptr->BoundingBoxQ(c);
+            renderBox(viewer, box, clusterId);
+        }
         clusterId++;
     }
     
@@ -106,7 +116,7 @@ int main (int argc, char** argv)
     pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("3D Viewer"));
     CameraAngle setAngle = XY;
     initCamera(setAngle, viewer);
-    simpleHighway(viewer);
+    simpleHighway(viewer, false, true, false, true);
     
     
     while (!viewer->wasStopped ())

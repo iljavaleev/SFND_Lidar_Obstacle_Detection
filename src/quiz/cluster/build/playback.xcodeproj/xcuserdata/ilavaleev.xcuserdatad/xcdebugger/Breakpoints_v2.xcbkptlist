@@ -142,8 +142,8 @@
             filePath = "cluster.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "main()"
             landmarkType = "9">
             <Locations>
@@ -207,6 +207,36 @@
                   endingLineNumber = "166"
                   offsetFromSymbolStart = "1916">
                </Location>
+               <Location
+                  uuid = "15D7F182-1D93-4C29-B32E-ADEB18E093CC - 5e31bc51d30621bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "quizCluster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "1468">
+               </Location>
+               <Location
+                  uuid = "15D7F182-1D93-4C29-B32E-ADEB18E093CC - 5e31bc51d30621bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "quizCluster"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/cluster.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "1532">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -220,8 +250,8 @@
             filePath = "cluster.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "euclideanCluster(points, tree, distanceTol)"
             landmarkType = "9">
          </BreakpointContent>
@@ -236,9 +266,41 @@
             filePath = "cluster.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "euclideanCluster(points, tree, distanceTol)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2180A234-3C10-41C3-AA95-8EBC84CEBB41"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cluster.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "main()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E9E66B2-5508-4429-912A-164D9EF6F40C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cluster.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

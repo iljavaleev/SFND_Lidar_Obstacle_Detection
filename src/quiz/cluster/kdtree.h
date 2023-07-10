@@ -77,7 +77,7 @@ struct KdTree
 	std::vector<int> search(std::vector<float> target, float distanceTol)
 	{
         std::vector<int> ids;
-        int depth{1};
+        int depth{0};
         Node *tmp_root{nullptr};
         std::vector<Node*> stack;
         stack.push_back(root);
