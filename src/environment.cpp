@@ -7,6 +7,8 @@
 #include "processPointClouds.h"
 // using templates for processPointClouds so also include .cpp to help linker
 #include "processPointClouds.cpp"
+//#include "quiz/ransac/ransac2d.cpp"
+//#include "quiz/cluster/cluster.cpp"
 
 std::vector<Car> initHighway(bool renderScene, pcl::visualization::PCLVisualizer::Ptr& viewer)
 {
@@ -58,9 +60,9 @@ void simpleHighway(pcl::visualization::PCLVisualizer::Ptr& viewer, bool renderSc
 //    renderPointCloud(viewer,segmentCloud.first,"obstCloud",Color(1,0,0));
 //    renderPointCloud(viewer,segmentCloud.second,"planeCloud",Color(0,1,0));
     
-    std::vector<pcl::PointCloud<pcl::PointXYZ>::Ptr> cloudClusters = process_ptr->Clustering(segmentCloud.first, 1.0, 3, 30);
+    std::vector<pcl::PointCloud<pcl::PointXYZ>::Ptr> cloudClusters = process_ptr->Clustering(segmentCloud.first, 0.5, 0, 30);
     int clusterId{};
-    std::vector<Color> colors{Color(1,0,0), Color(0,1,0), Color(0,0,1), Color(1,1,0 )};
+    std::vector<Color> colors{Color(1,0,0), Color(0,1,0), Color(0,0,1), Color(1,1,0 ), Color(0.1, 1, 0.1), Color(0, 1, 0), Color(0, 1, 1), Color(1, 1, 1), Color(0.5, 0.5, 1), Color(0.5, 1, 1), Color(0.5, 0.5, 1), Color(0, 0.4, 0.3)};
     
     for (auto c:cloudClusters){
         if (render_clusters){
@@ -108,6 +110,40 @@ void initCamera(CameraAngle setAngle, pcl::visualization::PCLVisualizer::Ptr& vi
         viewer->addCoordinateSystem (1.0);
 }
 
+void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer, ProcessPointClouds<pcl::PointXYZI> *process_ptr, const pcl::PointCloud<pcl::PointXYZI>::Ptr &inputCloud){
+    
+    auto filterCloud = process_ptr->FilterCloud(inputCloud, 0.3 , Eigen::Vector4f (-10, -5, -2, 1), Eigen::Vector4f ( 30, 8, 1, 1));
+       
+    auto segmentCloud = process_ptr->RANSACSegmentPlane(filterCloud, 25, 0.3);
+    
+    renderPointCloud(viewer, segmentCloud.first, "obstacleCloud", Color(1,0,0));
+    renderPointCloud(viewer, segmentCloud.second, "planeCloud", Color(0,1,0));
+    
+    std::vector<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = process_ptr->Clustering(segmentCloud.second, 0.53, 10, 300);
+
+    int clusterId{};
+    std::vector<Color> colors{Color(1,0,1), Color(0,1,0.5), Color(0,0,1), Color(1,1,0)};
+
+    bool render_clusters{true},render_box{true},render_min_max{false};
+
+    for (auto c:cloudClusters){
+        if (render_clusters){
+            std::cout << "cluster size ";
+            process_ptr->numPoints(c);
+            renderPointCloud(viewer, c, "obstCloud" + std::to_string(clusterId), colors.at(clusterId % colors.size()));
+        }
+        if (render_box){
+            Box box = process_ptr->BoundingBox(c);
+            renderBox(viewer, box, clusterId);
+        }
+        if (render_min_max){
+            BoxQ box = process_ptr->BoundingBoxQ(c);
+            renderBox(viewer, box, clusterId);
+        }
+        clusterId++;
+    }
+    
+}
 
 int main (int argc, char** argv)
 {
@@ -116,11 +152,28 @@ int main (int argc, char** argv)
     pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("3D Viewer"));
     CameraAngle setAngle = XY;
     initCamera(setAngle, viewer);
-    simpleHighway(viewer, false, true, false, true);
+    //simpleHighway(viewer, false, true, false, true);
+    
+    ProcessPointClouds<pcl::PointXYZI> *process_ptr{new ProcessPointClouds<pcl::PointXYZI>()};
+    
+    std::vector<std::__fs::filesystem::path> stream{process_ptr->streamPcd("/Users/ilavaleev/Dev/SFND_Lidar_Obstacle_Detection/src/sensors/data/pcd/data_2")};
+    auto streamIterator = stream.begin();
+    pcl::PointCloud<pcl::PointXYZI>::Ptr inputCloudI;
     
     
     while (!viewer->wasStopped ())
     {
-        viewer->spinOnce ();
+        viewer->removeAllPointClouds();
+        viewer->removeAllShapes();
+            
+        inputCloudI = process_ptr->loadPcd((*streamIterator).string());
+        cityBlock(viewer, process_ptr, inputCloudI);
+        
+        streamIterator++;
+        if(streamIterator == stream.end())
+            streamIterator = stream.begin();
+        
+        viewer->spinOnce();
+        pcl_sleep(0.5);
     } 
 }

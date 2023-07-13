@@ -3,6 +3,9 @@
 #include "processPointClouds.h"
 #include <Eigen/Geometry>
 #include <Eigen/Dense>
+#include <random>
+#include <cmath>
+#include <unordered_set>
 
 //constructor:
 template<typename PointT>
@@ -29,12 +32,44 @@ typename pcl::PointCloud<PointT>::Ptr ProcessPointClouds<PointT>::FilterCloud(ty
     auto startTime = std::chrono::steady_clock::now();
 
     // TODO:: Fill in the function to do voxel grid point reduction and region based filtering
-
+    typename pcl::PointCloud<PointT>::Ptr filtered{new typename pcl::PointCloud<PointT>()};
+    pcl::VoxelGrid<PointT> sor;
+    sor.setInputCloud(cloud);
+    sor.setLeafSize(filterRes, filterRes, filterRes);
+    sor.filter(*filtered);
+    
+    typename pcl::PointCloud<PointT>::Ptr reg{new typename pcl::PointCloud<PointT>()};
+    pcl::CropBox<PointT> box(true);
+    
+    box.setMin(minPoint);
+    box.setMax(maxPoint);
+    box.setInputCloud(filtered);
+    box.filter(*reg);
+    
+    //remove roof points
+    std::vector<int> indices;
+    pcl::CropBox<PointT> roof(true);
+    roof.setMin(Eigen::Vector4f(-1.5, -1.7, -1, 1));
+    roof.setMax(Eigen::Vector4f(2.6, 1.7, -.4, 1));
+    roof.setInputCloud(reg);
+    roof.filter(indices);
+    
+    pcl::PointIndices::Ptr inliers{new pcl::PointIndices};
+    for (auto i: indices)
+        inliers->indices.push_back(i);
+    
+    pcl::ExtractIndices<PointT> ex;
+    ex.setInputCloud(reg);
+    ex.setIndices(inliers);
+    ex.setNegative(true);
+    ex.filter(*reg);
+    
     auto endTime = std::chrono::steady_clock::now();
     auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
     std::cout << "filtering took " << elapsedTime.count() << " milliseconds" << std::endl;
-
-    return cloud;
+    
+   
+    return reg;
 
 }
 
@@ -46,7 +81,7 @@ std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT
     typename pcl::PointCloud<PointT>::Ptr obstCloud{new pcl::PointCloud<PointT>()};
     typename pcl::PointCloud<PointT>::Ptr planeCloud{new pcl::PointCloud<PointT>()};
     
-    pcl::ExtractIndices<pcl::PointXYZ> extract;
+    pcl::ExtractIndices<PointT> extract;
     extract.setInputCloud(cloud);
     extract.setIndices(inliers);
     
@@ -102,6 +137,73 @@ std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT
     return segResult;
 }
 
+template<typename PointT>
+std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::RANSACSegmentPlane(typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations, float distanceThreshold)
+{
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> distr(0, int(cloud->points.size())-1);
+    
+    PointT p1, p2, p3, inl;
+    double A, B, C, D, distance;
+    int max{};
+    std::unordered_set<int> inliersResult;
+    
+    
+    for (int i{}; i < maxIterations; i++){
+        auto p1 = cloud->points.at(distr(gen));
+        auto p2 = cloud->points.at(distr(gen));
+        auto p3 = cloud->points.at(distr(gen));
+        
+        double x1{p1.x}, x2{p2.x}, x3{p3.x};
+        double y1{p1.y}, y2{p2.y}, y3{p3.y};
+        double z1{p1.z}, z2{p2.z}, z3{p3.z};
+        
+        double ii{(y2-y1)*(z3-z1)-(z2-z1)*(y3-y1)};
+        double jj{(z2-z1)*(x3-x1)-(x2-x1)*(z3-z1)};
+        double kk{(x2-x1)*(y3-y1)-(y2-y1)*(x3-x1)};
+        
+        
+        A = ii;
+        B = jj;
+        C = kk;
+        D = -(ii * x1 + jj * y1 + kk * z1);
+        
+        std::unordered_set<int> inls;
+        int count{};
+        
+        for(int j{}; j<cloud->points.size(); j++){
+            inl = cloud->points.at(j);
+            distance = std::fabs(A * inl.x + B * inl.y + C * inl.z + D)/std::sqrt(A * A + B * B + C * C);
+            if (distance <= distanceThreshold){
+                inls.insert(j);
+                ++count;
+            }
+        }
+        
+        if (count > max){
+            max = count;
+            inliersResult = inls;
+        }
+    }
+    
+    typename pcl::PointCloud<PointT>::Ptr cloudInliers(new pcl::PointCloud<PointT>());
+    typename pcl::PointCloud<PointT>::Ptr cloudOutliers(new pcl::PointCloud<PointT>());
+
+    for(int index = 0; index < cloud->points.size(); index++)
+    {
+        PointT point = cloud->points[index];
+        if(inliersResult.count(index))
+            cloudInliers->points.push_back(point);
+        else
+            cloudOutliers->points.push_back(point);
+    }
+    
+    std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT>::Ptr> segResult(cloudInliers, cloudOutliers);
+    
+    return segResult;
+}
+
 
 template<typename PointT>
 std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::Clustering(typename pcl::PointCloud<PointT>::Ptr cloud, float clusterTolerance, int minSize, int maxSize)
@@ -113,10 +215,10 @@ std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::C
     std::vector<typename pcl::PointCloud<PointT>::Ptr> clusters;
     
     // TODO:: Fill in the function to perform euclidean clustering to group detected obstacles
-    pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>());
+    typename pcl::search::KdTree<PointT>::Ptr tree(new typename pcl::search::KdTree<PointT>());
     tree->setInputCloud(cloud);
     
-    pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
+    pcl::EuclideanClusterExtraction<PointT> ec;
     std::vector<pcl::PointIndices> cluster_indices;
     
     ec.setClusterTolerance(clusterTolerance);
@@ -128,7 +230,7 @@ std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::C
     ec.extract(cluster_indices);
     
     for (const auto &cluster: cluster_indices){
-        pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cluster(new pcl::PointCloud<pcl::PointXYZ>);
+        typename pcl::PointCloud<PointT>::Ptr cloud_cluster(new typename pcl::PointCloud<PointT>);
         for (const auto& idx : cluster.indices) {
             cloud_cluster->push_back(cloud->points.at(idx));
         }
@@ -187,12 +289,12 @@ BoxQ ProcessPointClouds<PointT>::BoundingBoxQ(typename pcl::PointCloud<PointT>::
     projectionTransform.block<3,3>(0,0) = eigPca.transpose();
     projectionTransform.block<3,1>(0,3) = -1.f * (projectionTransform.block<3,3>(0,0) * pcaCentroid.head<3>());
     
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudPointsProjected {new pcl::PointCloud<pcl::PointXYZ>};
+    typename pcl::PointCloud<PointT>::Ptr cloudPointsProjected {new typename pcl::PointCloud<PointT>};
     pcl::transformPointCloud(*cluster, *cloudPointsProjected, projectionTransform);
     
     //compute the max, the min and the center of the diagonal
     // Get the minimum and maximum points of the transformed cloud.
-    pcl::PointXYZ min, max;
+    PointT min, max;
     pcl::getMinMax3D(*cloudPointsProjected, min, max);
     const Eigen::Vector3f meanDiagonal = 0.5f * (max.getVector3fMap() + min.getVector3fMap());
     
